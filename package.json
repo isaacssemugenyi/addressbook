@@ -4,7 +4,7 @@
   "description": "",
   "main": "addressbook.js",
   "scripts": {
-    "start":"node addressbook.js",
+    "start": "node addressbook.js",
     "test": "mocha"
   },
   "keywords": [],
@@ -12,5 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.12.1",
+    "mocha": "^8.2.0"
   }
 }

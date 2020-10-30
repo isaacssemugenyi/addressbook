@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 const fs = require('fs');
 
 let contactArray = [];
@@ -8,7 +8,7 @@ function searchContact(){
         {
             type: 'input',
             name: 'name',
-            message: "Enter name to search?"
+            message: 'Enter name to search?'
         }
     ]).then(answers => {
            return checkContact(answers['name']);
@@ -24,7 +24,7 @@ function checkContact(name){
             let contactStatus = name;          
 
             contactArray.find(contact => {
-                 contact.name == contactStatus ? console.log(`name: ${contact.name}, phone: ${contact.phone}`) : ''
+                contact.name == contactStatus ? console.log(`name: ${contact.name}, phone: ${contact.phone}`) : '';
             });
         }
     });

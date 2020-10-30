@@ -7,14 +7,14 @@ function addNewContact(){
         {
             type: 'input',
             name: 'name',
-            message: "Enter contact name?",
+            message: 'Enter contact name?',
             default: 'anonymous'
         },
         {
             type: 'input',
             name: 'phone',
-            message: "Enter contact number?",
-            default: 0000
+            message: 'Enter contact number?',
+            default: 0
         }
     ]).then(answers => {
            return newContact(answers);
@@ -28,7 +28,7 @@ function newContact(userInput){
         } else {
             contactArray = JSON.parse(data);
             contactArray.length < 11 ? contactArray.push(userInput) : console.log('Address book full');
-            json = JSON.stringify(contactArray);
+            let json = JSON.stringify(contactArray);
             fs.writeFile('addressbook.json', json, 'utf8', ()=>{});
         }
     });

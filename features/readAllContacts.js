@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 // Reading all contacts in the phonebook
 function readAllContacts(file){

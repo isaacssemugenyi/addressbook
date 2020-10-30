@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 const fs = require('fs');
 
 let contactArray = [];
@@ -8,7 +8,7 @@ function deleteContact(){
         {
             type: 'input',
             name: 'name',
-            message: "Enter name to delete?"
+            message: 'Enter name to delete?'
         }
     ]).then(answers => {
            return checkContact(answers['name']);
@@ -28,7 +28,7 @@ function checkContact(name){
                     console.log(`${name} has been deleted from the address book`); 
                 }
             }
-            json = JSON.stringify(contactArray);
+            let json = JSON.stringify(contactArray);
             fs.writeFile('addressbook.json', json, 'utf8', ()=>{});   
              
         }

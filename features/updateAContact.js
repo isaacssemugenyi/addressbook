@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 const fs = require('fs');
 
 let contactArray = [];
@@ -8,7 +8,7 @@ function updateContact(){
         {
             type: 'input',
             name: 'name',
-            message: "Enter name to update?"
+            message: 'Enter name to update?'
         }
     ]).then(answers => {
            return contactToUpdate(answers['name']);
@@ -23,7 +23,7 @@ function contactToUpdate(enteredName){
             contactArray = JSON.parse(data);
             let contactStatus = enteredName;          
 
-            contactArray.map(contact => contact.name === contactStatus ? console.log(contact.name) : 'Not available')
+            contactArray.map(contact => contact.name === contactStatus ? console.log(contact.name) : 'Not available');
         }
     });
 }
