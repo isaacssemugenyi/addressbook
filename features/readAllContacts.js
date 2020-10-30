@@ -12,4 +12,4 @@ function readAllContacts(file){
     }
 }
 
-module.exports = readAllContacts;
+module.exports = { readAllContacts };

@@ -1,15 +1,10 @@
 const { assert } = require('chai');
-const addNewContact = require('../features/addContact');
+const { newContact } = require('../features/addContact');
+const sinon = require('sinon');
+const faker = require('faker');
 
-describe('Recursive Factorial', () => {
-  const newContact = addNewContact;
-  // Failing test
-  it('Failing test', () => {
-    assert.equal(newContact(2), 0);
-  });
-
-  //   Checks if number < 0 returns a string
-  it('factorial(-5) is String', () => {
-    assert.isString(newContact(-5));
+describe('Adding A Contact', () => {
+  it('checks the newContact function', () => {
+    assert.equal(newContact({ name: 'Alice', phone: 790059046 }));
   });
 });

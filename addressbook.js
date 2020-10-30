@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 
-const readAllContacts = require('./features/readAllContacts');
-const addNewContact = require('./features/addContact');
-const searchContact = require('./features/searchAContact');
-const deleteContact = require('./features/deleteContact');
+const { readAllContacts } = require('./features/readAllContacts');
+const { addNewContact } = require('./features/addContact');
+const { searchContact } = require('./features/searchAContact');
+const { deleteContact } = require('./features/deleteContact');
 
 inquirer.prompt([{
     type: 'rawlist',

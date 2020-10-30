@@ -34,5 +34,5 @@ function newContact(userInput){
     });
 }
 
-module.exports = addNewContact;
+module.exports = { addNewContact, newContact };
 

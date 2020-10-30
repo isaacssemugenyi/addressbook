@@ -11,11 +11,11 @@ function deleteContact(){
             message: 'Enter name to delete?'
         }
     ]).then(answers => {
-           return checkContact(answers['name']);
+           return deleteContactFromFile(answers['name']);
       }).catch(error => console.log(error.message));    
 }
 
-function checkContact(name){
+function deleteContactFromFile(name){
     fs.readFile('addressbook.json', 'utf8', (err, data)=>{
         if (err){ console.log(err); 
         } else {
@@ -35,4 +35,4 @@ function checkContact(name){
     });
 }
 
-module.exports = deleteContact;
+module.exports = { deleteContact, deleteContactFromFile };

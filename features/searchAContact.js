@@ -30,4 +30,4 @@ function checkContact(name){
     });
 }
 
-module.exports = searchContact;
+module.exports = { searchContact , checkContact };
