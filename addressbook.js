@@ -1,10 +1,9 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 
-const readAllContacts = require('./readAllContacts')
-const addNewContact = require('./addContact')
-const searchContact = require('./searchAContact')
-const deleteContact = require('./deleteContact')
+const readAllContacts = require('./features/readAllContacts')
+const addNewContact = require('./features/addContact')
+const searchContact = require('./features/searchAContact')
+const deleteContact = require('./features/deleteContact')
 
 inquirer.prompt([{
     type: 'rawlist',
@@ -20,7 +19,7 @@ inquirer.prompt([{
         case 'Add new Contact':
             addNewContact(); break;
         case 'Update a Contact':
-            console.log(4); break;
+            console.log("Sorry, I was unable to make the update work"); break;
         case 'Search a Contact':
             searchContact(); break;
         case 'Delete a Contact':

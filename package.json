@@ -4,6 +4,7 @@
   "description": "",
   "main": "addressbook.js",
   "scripts": {
+    "start":"node addressbook.js",
     "test": "mocha"
   },
   "keywords": [],
