@@ -3,6 +3,7 @@ const fs = require('fs');
 
 let contactArray = [];
 
+// Still trying to configure the update function to perform actual updating of data
 function updateContact(){
     inquirer.prompt([
         {
@@ -29,10 +30,5 @@ function contactToUpdate(enteredName){
 }
 
 updateContact();
-
-// function update(contact){
-
-// }
-// module.exports = searchContact;
 
 
