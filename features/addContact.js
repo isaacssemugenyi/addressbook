@@ -2,6 +2,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 let contactArray = [];
+
+// Receiving details from the user
 function addNewContact(){
     inquirer.prompt([
         {
@@ -21,6 +23,7 @@ function addNewContact(){
       }).catch(error => console.log(error.message));    
 }
 
+// Saving Details to JSON file
 function newContact(userInput){
     fs.readFile('addressbook.json', 'utf8', (err, data)=>{
         if (err){ 

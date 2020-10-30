@@ -1,9 +1,12 @@
 const inquirer = require('inquirer');
 
+// Import all functionalities
 const { readAllContacts } = require('./features/readAllContacts');
 const { addNewContact } = require('./features/addContact');
 const { searchContact } = require('./features/searchAContact');
 const { deleteContact } = require('./features/deleteContact');
+
+// Prompting the user for a selection and switch to functionality based on input
 
 inquirer.prompt([{
     type: 'rawlist',

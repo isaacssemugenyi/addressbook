@@ -3,6 +3,7 @@ const fs = require('fs');
 
 let contactArray = [];
 
+// Receiving input of name to delete from user
 function deleteContact(){
     inquirer.prompt([
         {
@@ -14,6 +15,8 @@ function deleteContact(){
            return deleteContactFromFile(answers['name']);
       }).catch(error => console.log(error.message));    
 }
+
+// Logic to delete the name from JSON file
 
 function deleteContactFromFile(name){
     fs.readFile('addressbook.json', 'utf8', (err, data)=>{

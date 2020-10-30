@@ -3,6 +3,7 @@ const fs = require('fs');
 
 let contactArray = [];
 
+// Receive name to check in JSON file
 function searchContact(){
     inquirer.prompt([
         {
@@ -14,6 +15,8 @@ function searchContact(){
            return checkContact(answers['name']);
       }).catch(error => console.log(error.message));    
 }
+
+// Fucntion to check name from file
 
 function checkContact(name){
     fs.readFile('addressbook.json', 'utf8', (err, data)=>{

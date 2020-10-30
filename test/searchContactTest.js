@@ -2,7 +2,8 @@ const { assert } = require('chai');
 const {checkContact} = require('../features/searchAContact');
 
 describe('Searching A Contact', () => {
-  // Failing test
+  
+  // Testing searching functionality
   it('checks the checkContact function', () => {
     assert.equal(checkContact({ name: 'Alice' }));
   });

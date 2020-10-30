@@ -3,7 +3,8 @@ const { deleteContactFromFile } = require('../features/deleteContact');
 
 describe('Deleting A Contact', () => {
   const deleteContact = deleteContactFromFile;
-  // Failing test
+  
+  // Testing Deleting functionality
   it('checks the deleteContact function', () => {
     assert.equal(deleteContact({ name: 'Alice' }));
   });
